@@ -1,0 +1,145 @@
+gridster-item {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    height: 65px !important;
+}
+
+table {
+  width: 100%;
+  box-shadow: none !important;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #838282;
+}
+
+.mat-mini-fab {
+  float: right;
+}
+
+.mat-row:hover {
+  background: #e3e3e3;
+}
+
+tr:hover td .btn-row {
+  display: inline-block !important;
+}
+
+.btn-row {
+  right: 40px;
+  position: absolute!important;
+  margin-top: -20px !important;
+  display: none !important;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+gridster {
+    margin-top: -10px;
+    background: white !important;
+}
+
+.gridster-item-moving {
+  z-index: 999 !important;
+}
+
+.fix {
+  z-index: -999;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 20px;
+}
+
+.icon {
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.enable {
+    color: #ff4081 !important;
+}
+
+.box:hover .btn-delete {
+  display: block !important;
+}
+
+.ic {
+    margin-top: -4px !important;
+    background-repeat: no-repeat!important;
+    display: inline-block!important;
+    fill: currentColor!important;
+    height: 93px!important;
+    width: 23px!important;
+}
+
+.btn-delete {
+  display: none !important;
+  height: 30px !important;
+  right: 20px;
+  position: absolute !important;
+  align-items: center;
+  width: 30px !important;
+}
+
+.box {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box-edit {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+.item-hover:hover {
+    cursor: grab;
+    transition: none;
+    z-index: 2;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    background-color: rgb(235, 235, 235);
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.fab-toggler {
+  float: right;
+  z-index: 100;
+}

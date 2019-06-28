@@ -1,9 +1,7 @@
 package com.example.customfield;
 
 import java.io.Serializable;
-import java.util.List;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -42,8 +40,7 @@ public class MetaCustomField { // MetaField
     @NotNull
     private FieldType type;
 
-    @ElementCollection
-    private List<String> options;
+    private String options;
 
     private String label;
 

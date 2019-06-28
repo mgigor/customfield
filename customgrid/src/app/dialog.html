@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>New custom field!</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Id" [(ngModel)]="data.id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Label" [(ngModel)]="data.label">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Field type</mat-label>
+      <mat-select [(ngModel)]="data.type">
+        <mat-option value="INPUT">INPUT</mat-option>
+        <mat-option value="SELECT">SELECT</mat-option>
+        <mat-option value="TOGGLE">TOGGLE</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="data.type === 'SELECT'">
+        <input matInput placeholder="Options (;)" [(ngModel)]="data.options">
+      </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Create!</button>
+</div>
